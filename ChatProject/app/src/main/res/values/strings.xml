@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ChatProject</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_passsword">Enter Passsword</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="empty_user_error">Empty User Error</string>
+    <string name="empty_password_error">Empty Password Error</string>
+    <string name="username_or_password_is_incorrect">Username Or Password Incorrect</string>
+    <string name="what_s_is_your_mine">What\'s is your mine?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="enter_usernames">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="empty_username_error">Empty Username</string>
+    <string name="empty_password_errors">Empty Password</string>
+    <string name="username_or_password_is_incorrects">Username Or Password Is InCorrect</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_user">Enter Username</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_passwords">Enter Password</string>
+    <string name="enter_repassword">Enter Repassword</string>
+    <string name="sign_up">Sign UP</string>
+    <string name="sign_ups">Sign Up</string>
+    <string name="enter_scurity_question">Enter Scurity Question</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="empty_name_error">Empty Name</string>
+    <string name="empty_email_error">Empty Email</string>
+    <string name="empty_passwords_error">Empty Password</string>
+    <string name="empty_repassword_error">Empty Repassword</string>
+    <string name="empty_question_error">Empty Question</string>
+    <string name="password_and_repassword_is_incorrect">Password And Repassword Is Incorrect</string>
+    <string name="registers">Register</string>
+</resources>
