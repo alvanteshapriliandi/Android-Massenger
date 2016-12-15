@@ -1,7 +1,9 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Activitis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.alvan.chatproject.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

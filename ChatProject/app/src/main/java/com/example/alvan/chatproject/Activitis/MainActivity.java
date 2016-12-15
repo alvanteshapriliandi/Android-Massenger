@@ -1,10 +1,17 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Activitis;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import com.example.alvan.chatproject.Fragments.AcountFragment;
+import com.example.alvan.chatproject.Fragments.FeedbackFragment;
+import com.example.alvan.chatproject.Fragments.ProfileFragment;
+import com.example.alvan.chatproject.R;
+import com.example.alvan.chatproject.Fragments.RecyclerViewFragment;
+import com.example.alvan.chatproject.Adapter.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

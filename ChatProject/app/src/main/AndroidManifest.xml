@@ -8,15 +8,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Activitis.MainActivity" />
+        <activity android:name=".Activitis.LoginActivity" />
+        <activity android:name=".Activitis.RegisterActivity" />
+        <activity android:name=".Activitis.forgetActivity" />
+        <activity android:name=".Activitis.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".Activitis.ChangeActivity"></activity>
     </application>
 
 </manifest>

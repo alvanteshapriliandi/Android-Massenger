@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Adapter;
 
 /**
  * Created by alvan on 13/12/16.

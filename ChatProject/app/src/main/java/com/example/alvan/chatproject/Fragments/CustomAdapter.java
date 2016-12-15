@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Fragments;
 
 /**
  * Created by alvan on 30/11/16.
@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.alvan.chatproject.R;
 
 /**
  * Provide views to RecyclerView with data from mDataSet.

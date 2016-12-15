@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

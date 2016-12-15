@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Fragments;
 
 /**
  * Created by alvan on 30/11/16.
@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
+
+import com.example.alvan.chatproject.R;
 
 /**
  * Demonstrates the use of {@link RecyclerView} with a {@link LinearLayoutManager} and a

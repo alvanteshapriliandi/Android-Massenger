@@ -33,4 +33,9 @@
     <string name="empty_question_error">Empty Question</string>
     <string name="password_and_repassword_is_incorrect">Password And Repassword Is Incorrect</string>
     <string name="registers">Register</string>
+    <string name="next">Next</string>
+    <string name="question">Question</string>
+    <string name="enter_answer">Enter Answer</string>
+    <string name="sign_ins">Sign In</string>
+    <string name="get_started">Get Started</string>
 </resources>

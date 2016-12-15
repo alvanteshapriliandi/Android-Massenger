@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Fragments;
 
 
 import android.content.Intent;
@@ -12,6 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.alvan.chatproject.Activitis.MainActivity;
+import com.example.alvan.chatproject.Activitis.forgetActivity;
+import com.example.alvan.chatproject.Adapter.LoginAPI;
+import com.example.alvan.chatproject.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +25,7 @@ public class LoginFragment extends Fragment {
     private EditText mUsernameEditText;
     private EditText mPasswordEditText;
     private Button mSigninButton;
-    private Button mSignupButton;
+    private Button mForgetpPasswordButton;
     private LoginAPI mLoginAPI;
 
     @Nullable
@@ -28,12 +33,15 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_login, container, false);
+
         mUsernameEditText = (EditText) view.findViewById(R.id.FragmentLogin_username_edittext);
         mPasswordEditText = (EditText) view.findViewById(R.id.FragmentLogin_password_edittext);
         mSigninButton = (Button) view.findViewById(R.id.FragmentLogin_signin_button);
-        mSignupButton = (Button) view.findViewById(R.id.FragmentLogin_signup_button);
+        mForgetpPasswordButton = (Button) view.findViewById(R.id.FragmentLogin_forgetpassword_button);
+
+
         mSigninButton.setOnClickListener(mSigninButtononClickListener);
-        mSignupButton.setOnClickListener(mSignupButtononClickListener);
+        mForgetpPasswordButton.setOnClickListener(mForgetPasswordButtononClickListener);
         return view;
     }
 
@@ -72,10 +80,11 @@ public class LoginFragment extends Fragment {
         }
     };
 
-    private View.OnClickListener mSignupButtononClickListener = new View.OnClickListener() {
+
+    private View.OnClickListener mForgetPasswordButtononClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getActivity(), RegisterActivity.class);
+            Intent intent = new Intent(getActivity(), forgetActivity.class);
             startActivity(intent);
             getActivity().finish();
             return;

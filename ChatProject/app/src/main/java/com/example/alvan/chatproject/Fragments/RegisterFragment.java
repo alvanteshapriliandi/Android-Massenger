@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject;
+package com.example.alvan.chatproject.Fragments;
 
 
 import android.content.Intent;
@@ -10,15 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import java.security.PrivateKey;
+import com.example.alvan.chatproject.Activitis.LoginActivity;
+import com.example.alvan.chatproject.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RegisterFragment extends Fragment {
+
 
     private EditText mNameEditText;
     private EditText mUsernameEditText;
@@ -39,9 +40,9 @@ public class RegisterFragment extends Fragment {
         mPasswordEditText = (EditText) view.findViewById(R.id.FragmentRegister_password_edittext);
         mRepasswordEditText = (EditText) view.findViewById(R.id.FragmentRegister_repassword_edittext);
         mQuestionEditText = (EditText) view.findViewById(R.id.FragmentRegister_question_edittext);
-        mRegisterButton = (Button) view.findViewById(R.id.FragmentLogin_signin_button);
+        mRegisterButton = (Button) view.findViewById(R.id.FragmentRegister_register_button);
         mRegisterButton.setOnClickListener(mRegisterButtononClickListener);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 
     private View.OnClickListener mRegisterButtononClickListener = new View.OnClickListener(){
@@ -82,8 +83,9 @@ public class RegisterFragment extends Fragment {
             Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
             getActivity().finish();
+            return;
 
-            Toast.makeText(getContext(), R.string.password_and_repassword_is_incorrect, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getContext(), R.string.password_and_repassword_is_incorrect, Toast.LENGTH_SHORT).show();
 
         }
     };
