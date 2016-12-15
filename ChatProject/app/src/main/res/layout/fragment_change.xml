@@ -1,31 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alvan.chatproject.Fragments.LoginFragment">
+    tools:context="com.example.alvan.chatproject.Fragments.ChangeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
-        android:id="@+id/FragmentForget_question_edittext"
-        android:hint="@string/question"/>
+        android:id="@+id/FragmentChange_newpassword_edittext"
+        android:hint="@string/enter_new_password"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
-        android:id="@+id/FragmentForget_answer_edittext"
-        android:hint="@string/enter_answer"/>
+        android:id="@+id/FragmentChange_newrepassword_edittext"
+        android:hint="@string/enter_new_repassword"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        android:id="@+id/FragmentForget_next_button"
+        android:text="@string/done"
+        android:id="@+id/FragmentChange_done_button"
         />
 
 </LinearLayout>

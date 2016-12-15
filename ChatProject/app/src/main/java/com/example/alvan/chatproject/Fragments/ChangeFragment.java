@@ -11,39 +11,37 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.alvan.chatproject.Activitis.ChangeActivity;
+import com.example.alvan.chatproject.Activitis.LoginActivity;
 import com.example.alvan.chatproject.Activitis.forgetActivity;
 import com.example.alvan.chatproject.R;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ForgetFragment extends Fragment {
+public class ChangeFragment extends Fragment {
 
-    private EditText mQuestionEditText;
-    private EditText mAnswerEditText;
-    private Button mNextButton;
+    private EditText mNewPasswordEditText;
+    private EditText mNewRepasswordEditText;
+    private Button mDoneButton;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_forget, container, false);
+        View view = inflater.inflate(R.layout.fragment_change, container, false);
 
-        mQuestionEditText = (EditText) view.findViewById(R.id.FragmentForget_question_edittext);
-        mAnswerEditText = (EditText) view.findViewById(R.id.FragmentForget_answer_edittext);
-        mNextButton = (Button) view.findViewById(R.id.FragmentForget_next_button);
+        mNewPasswordEditText = (EditText) view.findViewById(R.id.FragmentChange_newpassword_edittext);
+        mNewRepasswordEditText = (EditText) view.findViewById(R.id.FragmentChange_newrepassword_edittext);
+        mDoneButton = (Button) view.findViewById(R.id.FragmentChange_done_button);
 
-        mNextButton.setOnClickListener(mNextButtononClickListener);
-
+        mDoneButton.setOnClickListener(mDoneButtononClickListener);
         return view;
     }
 
-    private View.OnClickListener mNextButtononClickListener = new View.OnClickListener() {
+    private View.OnClickListener mDoneButtononClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getActivity(), ChangeActivity.class);
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
             getActivity().finish();
             return;
