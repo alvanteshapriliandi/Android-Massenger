@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject.Fragments;
+package com.example.alvan.chatproject.view.fragments;
 
 
 import android.content.Intent;
@@ -12,9 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.alvan.chatproject.Activitis.MainActivity;
-import com.example.alvan.chatproject.Activitis.forgetActivity;
-import com.example.alvan.chatproject.Adapter.LoginAPI;
+import com.example.alvan.chatproject.view.activitis.MainActivity;
+import com.example.alvan.chatproject.view.activitis.forgetActivity;
+import com.example.alvan.chatproject.view.adapter.LoginAPI;
 import com.example.alvan.chatproject.R;
 
 

@@ -8,8 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.alvan.chatproject.Activitis.forgetActivity"
-    class="com.example.alvan.chatproject.Fragments.ForgetFragment"
+    tools:context=".view.activitis.forgetActivity"
+    class="com.example.alvan.chatproject.view.fragments.ForgetFragment"
     android:tag="ForgetFragment">
 
 </fragment>

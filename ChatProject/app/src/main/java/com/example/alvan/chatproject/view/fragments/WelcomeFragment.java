@@ -1,17 +1,16 @@
-package com.example.alvan.chatproject.Fragments;
+package com.example.alvan.chatproject.view.fragments;
 
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.alvan.chatproject.Activitis.LoginActivity;
-import com.example.alvan.chatproject.Activitis.RegisterActivity;
+import com.example.alvan.chatproject.view.activitis.LoginActivity;
+import com.example.alvan.chatproject.view.activitis.RegisterActivity;
 import com.example.alvan.chatproject.R;
 
 
@@ -22,9 +21,9 @@ public class WelcomeFragment extends Fragment {
     private Button mSigninButton;
     private Button mGetStartedButton;
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_welcome, container, false);
 
@@ -42,7 +41,6 @@ public class WelcomeFragment extends Fragment {
         public void onClick(View view) {
             Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
-            getActivity().finish();
             return;
 
         }
@@ -53,7 +51,6 @@ public class WelcomeFragment extends Fragment {
         public void onClick(View view) {
             Intent intent = new Intent(getActivity(), RegisterActivity.class);
             startActivity(intent);
-            getActivity().finish();
             return;
         }
     };

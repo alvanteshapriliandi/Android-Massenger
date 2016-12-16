@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject.Fragments;
+package com.example.alvan.chatproject.view.fragments;
 
 
 import android.content.Intent;
@@ -11,8 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.alvan.chatproject.Activitis.ChangeActivity;
-import com.example.alvan.chatproject.Activitis.forgetActivity;
+import com.example.alvan.chatproject.view.activitis.ChangeActivity;
 import com.example.alvan.chatproject.R;
 
 

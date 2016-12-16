@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject.Fragments;
+package com.example.alvan.chatproject.view.fragments;
 
 
 import android.os.Bundle;

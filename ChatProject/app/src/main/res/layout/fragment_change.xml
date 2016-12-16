@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alvan.chatproject.Fragments.ChangeFragment">
+    tools:context=".view.fragments.ChangeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText

@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject.Fragments;
+package com.example.alvan.chatproject.view.fragments;
 
 
 import android.os.Bundle;
@@ -13,10 +13,10 @@ import com.example.alvan.chatproject.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AcountFragment extends Fragment {
+public class FeedbackFragment extends Fragment {
 
 
-    public AcountFragment() {
+    public FeedbackFragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +25,7 @@ public class AcountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_acount, container, false);
+        return inflater.inflate(R.layout.fragment_feedback, container, false);
     }
 
 }

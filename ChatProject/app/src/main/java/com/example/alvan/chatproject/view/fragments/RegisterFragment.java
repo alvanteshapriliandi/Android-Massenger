@@ -1,4 +1,4 @@
-package com.example.alvan.chatproject.Fragments;
+package com.example.alvan.chatproject.view.fragments;
 
 
 import android.content.Intent;
@@ -11,9 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.alvan.chatproject.Activitis.LoginActivity;
+import com.example.alvan.chatproject.view.activitis.LoginActivity;
 import com.example.alvan.chatproject.R;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -89,4 +88,6 @@ public class RegisterFragment extends Fragment {
 
         }
     };
+
+
 }
