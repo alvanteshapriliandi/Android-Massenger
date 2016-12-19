@@ -10,14 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+import android.content.Context;
 
 import com.example.alvan.chatproject.view.activitis.LoginActivity;
 import com.example.alvan.chatproject.R;
+import com.example.alvan.chatproject.presenter.auth.RegisterPresenter;
+import com.example.alvan.chatproject.presenter.auth.RegisterResponse;
+import com.example.alvan.chatproject.view.activitis.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RegisterFragment extends Fragment {
+public class RegisterFragment extends Fragment implements RegisterResponse{
 
 
     private EditText mNameEditText;
@@ -27,20 +32,27 @@ public class RegisterFragment extends Fragment {
     private EditText mRepasswordEditText;
     private EditText mQuestionEditText;
     private Button mRegisterButton;
+    private RegisterPresenter registerpresenter;
+    Context context;
+
+    public RegisterFragment(){
+
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_register, container, false);
-        mNameEditText = (EditText) view.findViewById(R.id.FragmentRegister_name_edittext);
         mUsernameEditText = (EditText) view.findViewById(R.id.FragmentRegister_username_edittext);
         mEmailEditText = (EditText) view.findViewById(R.id.FragmentRegister_email_edittext);
         mPasswordEditText = (EditText) view.findViewById(R.id.FragmentRegister_password_edittext);
         mRepasswordEditText = (EditText) view.findViewById(R.id.FragmentRegister_repassword_edittext);
-        mQuestionEditText = (EditText) view.findViewById(R.id.FragmentRegister_question_edittext);
         mRegisterButton = (Button) view.findViewById(R.id.FragmentRegister_register_button);
         mRegisterButton.setOnClickListener(mRegisterButtononClickListener);
+
+        context = getContext();
+        registerpresenter = new RegisterPresenter(this);
         return view;
     }
 
@@ -48,11 +60,6 @@ public class RegisterFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            String name = mNameEditText.getText().toString();
-            if (name.isEmpty()){
-                mNameEditText.setError(getString(R.string.empty_name_error));
-                return;
-            }
             String username = mUsernameEditText.getText().toString();
             if (username.isEmpty()){
                 mUsernameEditText.setError(getString(R.string.empty_username_error));
@@ -73,21 +80,30 @@ public class RegisterFragment extends Fragment {
                 mRepasswordEditText.setError(getString(R.string.empty_repassword_error));
                 return;
             }
-            String question = mQuestionEditText.getText().toString();
-            if (question.isEmpty()){
-                mQuestionEditText.setError(getString(R.string.empty_question_error));
-                return;
-            }
 
-            Intent intent = new Intent(getActivity(), LoginActivity.class);
-            startActivity(intent);
-            getActivity().finish();
-            return;
+
+            registerpresenter.doRegister(mUsernameEditText.getText().toString(), mEmailEditText.getText().toString(), mPasswordEditText.getText().toString());
 
             //Toast.makeText(getContext(), R.string.password_and_repassword_is_incorrect, Toast.LENGTH_SHORT).show();
 
         }
     };
+
+    public void doRegisterSuccess(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void doRegisterFail(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void doConnectionError(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
 
 
 }

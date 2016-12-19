@@ -1,6 +1,7 @@
 package com.example.alvan.chatproject.view.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,19 +15,21 @@ import android.widget.Toast;
 
 import com.example.alvan.chatproject.view.activitis.MainActivity;
 import com.example.alvan.chatproject.view.activitis.forgetActivity;
-import com.example.alvan.chatproject.view.adapter.LoginAPI;
+import com.example.alvan.chatproject.presenter.auth.LoginPresenter;
+import com.example.alvan.chatproject.presenter.auth.LoginResponse ;
 import com.example.alvan.chatproject.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements LoginResponse{
     private EditText mUsernameEditText;
     private EditText mPasswordEditText;
     private Button mSigninButton;
     private Button mForgetpPasswordButton;
-    private LoginAPI mLoginAPI;
+    private LoginPresenter loginpresenter;
+    Context context;
 
     @Nullable
     @Override
@@ -42,13 +45,14 @@ public class LoginFragment extends Fragment {
 
         mSigninButton.setOnClickListener(mSigninButtononClickListener);
         mForgetpPasswordButton.setOnClickListener(mForgetPasswordButtononClickListener);
+        loginpresenter = new LoginPresenter(this);
+        context = getContext();
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mLoginAPI = new LoginAPI();
     }
 
     //berfungsi agar bisa di klik tombol sign in nya
@@ -66,16 +70,7 @@ public class LoginFragment extends Fragment {
                 mPasswordEditText.setError(getString(R.string.empty_password_errors));
             }
 
-            if(mLoginAPI.authenticate(username,password))
-            {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-                return;
-            }
-
-
-            Toast.makeText(getContext(), R.string.username_or_password_is_incorrects, Toast.LENGTH_SHORT).show();
+            loginpresenter.doLogin(mUsernameEditText.getText().toString(), mPasswordEditText.getText().toString());
 
         }
     };
@@ -90,4 +85,21 @@ public class LoginFragment extends Fragment {
             return;
         }
     };
+
+    public void doLoginSuccess(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void doLoginFail(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void doConnectionError(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
 }

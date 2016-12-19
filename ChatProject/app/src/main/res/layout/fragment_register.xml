@@ -6,12 +6,6 @@
     tools:context=".view.fragments.RegisterFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:id="@+id/FragmentRegister_name_edittext"
-        android:hint="@string/enter_name"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -41,13 +35,6 @@
         android:id="@+id/FragmentRegister_repassword_edittext"
         android:hint="@string/enter_repassword"/>
 
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:id="@+id/FragmentRegister_question_edittext"
-        android:hint="@string/enter_scurity_question"/>
 
     <Button
         android:layout_width="match_parent"
