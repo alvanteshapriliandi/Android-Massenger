@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.activitis.LoginActivity"
     class="com.example.alvan.chatproject.view.fragments.LoginFragment"
-    android:tag="LoginFragment">
+    android:tag="LoginFragment"
+    tools:layout="@layout/fragment_login">
 
 </fragment>

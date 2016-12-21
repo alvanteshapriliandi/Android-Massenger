@@ -13,14 +13,13 @@
         android:layout_width="match_parent"
         android:id="@+id/barLayout"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@layout/header_gradient"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip">
         >
-
-        <include
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            layout="@layout/toolbar_layout"
-            />
-
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         <android.support.design.widget.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

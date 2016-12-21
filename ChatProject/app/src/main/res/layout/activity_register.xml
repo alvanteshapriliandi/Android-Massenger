@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.activitis.forgetActivity"
     class="com.example.alvan.chatproject.view.fragments.RegisterFragment"
-    android:tag="RegisterFragment">
+    android:tag="RegisterFragment"
+    tools:layout="@layout/fragment_register">
 
 </fragment>
