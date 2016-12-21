@@ -42,4 +42,9 @@
     <string name="enter_new_repassword">Enter New Repassword</string>
     <string name="deonw">Done</string>
     <string name="done">Done</string>
+    <string name="backdrop_title">Backdrop Title</string>
+    <string name="backdrop_subtitle">Backdrop Subtitle</string>
+    <string name="action_play_next">Action Play Next</string>
+    <string name="action_add_favourite">Action Add Favourite</string>
+    <string name="action_settings">Action Settings</string>
 </resources>
