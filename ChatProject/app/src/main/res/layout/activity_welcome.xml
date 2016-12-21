@@ -10,5 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.activitis.WelcomeActivity"
     class="com.example.alvan.chatproject.view.fragments.WelcomeFragment"
-    android:tag="WelcomeFragment">
+    android:tag="WelcomeFragment"
+    tools:layout="@layout/fragment_welcome">
 </fragment>
