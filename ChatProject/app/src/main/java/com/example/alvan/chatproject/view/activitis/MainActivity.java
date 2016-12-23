@@ -4,13 +4,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.example.alvan.chatproject.view.fragments.AcountFragment;
 import com.example.alvan.chatproject.view.fragments.FeedbackFragment;
+import com.example.alvan.chatproject.view.fragments.MemberFragment;
 import com.example.alvan.chatproject.view.fragments.ProfileFragment;
 import com.example.alvan.chatproject.R;
-import com.example.alvan.chatproject.view.fragments.RecyclerViewFragment;
 import com.example.alvan.chatproject.view.adapter.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         setSupportActionBar(toolbar);
-        viewPagerAdapter.addFragments(new RecyclerViewFragment(), "Home");
+        viewPagerAdapter.addFragments(new MemberFragment(), "Inbox");
         viewPagerAdapter.addFragments(new FeedbackFragment(), "Feedback");
         viewPagerAdapter.addFragments(new AcountFragment(), "Follow");
         viewPagerAdapter.addFragments(new ProfileFragment(), "Profile");
