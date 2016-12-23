@@ -18,9 +18,13 @@
         <activity android:name=".view.activitis.LoginActivity" />
         <activity android:name=".view.activitis.RegisterActivity" />
         <activity android:name=".view.activitis.forgetActivity" />
-        <activity android:name=".view.activitis.WelcomeActivity" />
+        <activity android:name=".view.activitis.WelcomeActivity">
+
+        </activity>
         <activity android:name=".view.activitis.ChangeActivity" />
-        <activity android:name=".view.activitis.ChatActivity"></activity>
+        <activity android:name=".view.activitis.ChatActivity">
+
+        </activity>
     </application>
 
 </manifest>
