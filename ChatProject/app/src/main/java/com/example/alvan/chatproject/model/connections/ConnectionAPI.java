@@ -10,7 +10,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * Created by David Bezalel Laoli on 10/14/2016.
  */
 public class ConnectionAPI {
-    private static final String BASEURL = "http://192.168.1.227:1337/";
+    private static final String BASEURL = "http://172.22.205.70:1337/";
     private static ConnectionAPI instance;
     private static APIModel api;
     private static Retrofit retrofit;

@@ -16,6 +16,7 @@ public class Member implements Parcelable {
     private String name;
     private String team;
     private int thumb;
+    //private int follow;
 
     public Member() {
     }
@@ -25,6 +26,7 @@ public class Member implements Parcelable {
         name = in.readString();
         team = in.readString();
         thumb = in.readInt();
+        //follow = in.readInt();
     }
 
     public static final Creator<Member> CREATOR = new Creator<Member>() {
@@ -67,9 +69,14 @@ public class Member implements Parcelable {
         return thumb;
     }
 
+    //public int getFollow(){
+    //    return follow;
+    //}
+
     public void setThumb(int thumb) {
         this.thumb = thumb;
     }
+    //public void setFollow(int follow) {this.follow = follow;}
 
     @Override
     public int describeContents() {
@@ -82,5 +89,8 @@ public class Member implements Parcelable {
         dest.writeString(name);
         dest.writeString(team);
         dest.writeInt(thumb);
+        //dest.writeInt(follow);
     }
+
+
 }

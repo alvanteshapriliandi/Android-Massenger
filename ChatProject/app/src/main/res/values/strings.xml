@@ -42,4 +42,13 @@
     <string name="enter_new_repassword">Enter New Repassword</string>
     <string name="deonw">Done</string>
     <string name="done">Done</string>
+    <string name="backdrop_title">Backdrop Title</string>
+    <string name="backdrop_subtitle">Backdrop Subtitle</string>
+    <string name="action_play_next">Action Play Next</string>
+    <string name="action_add_favourite">Action Add Favourite</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="ayana_shahab">Ayana Shahab</string>
+    <string name="elaine_hatanto">Elaine Hatanto</string>
+    <string name="enter_a_message">Enter a Message</string>
+    <string name="frieska_anastasia_laksani">Frieska Anastasia Laksani</string>
 </resources>

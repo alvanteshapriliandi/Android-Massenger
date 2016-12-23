@@ -55,6 +55,7 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
         return memberList.get(position);
     }
 
+
     @Override
     public MemberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_inbox, parent, false);
@@ -67,6 +68,7 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
         final Member member = memberList.get(position);
 
         holder.memberThumb.setImageResource(member.getThumb());
+        //holder.memberFollow.setImageResource(member.getFollow());
         holder.memberName.setText(member.getName());
         holder.memberTeam.setText(member.getTeam());
     }
@@ -89,15 +91,16 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
     static class MemberViewHolder extends RecyclerView.ViewHolder {
 
         ImageView memberThumb;
+        //mageView memberFollow;
         TextView memberName;
         TextView memberTeam;
 
         public MemberViewHolder(View itemView) {
             super(itemView);
-
             memberThumb = (ImageView) itemView.findViewById(R.id.thumb);
             memberName = (TextView) itemView.findViewById(R.id.name);
             memberTeam = (TextView) itemView.findViewById(R.id.team);
+            //memberFollow = (ImageView) itemView.findViewById(R.id.follow);
         }
     }
 }
