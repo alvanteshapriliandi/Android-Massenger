@@ -65,11 +65,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
+                android:background="#66CDAA"
                 android:text="Login"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/forget_password"
+                android:background="#66CDAA"
                 android:id="@+id/FragmentLogin_forgetpassword_button"
                 />
         </LinearLayout>

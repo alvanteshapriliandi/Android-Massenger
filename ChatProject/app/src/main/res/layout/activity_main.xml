@@ -7,33 +7,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activitis.MainActivity">
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_height="?actionBarSize"
         android:layout_width="match_parent"
-        android:id="@+id/barLayout"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="@layout/header_gradient"
-        android:paddingTop="5dip"
-        android:paddingBottom="5dip">
-        <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        <android.support.design.widget.TabLayout
+        android:background="?attr/colorPrimary"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tmsg"/>
+    <android.support.design.widget.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tabLayout"
             app:tabMode="fixed"
             app:tabGravity="fill"
+            android:background="#778899"
             app:tabTextColor="@color/cardview_shadow_start_color"
             app:tabTextAppearance="@style/MyTabStyle"
+            android:layout_below="@+id/toolbar"
             />
-    </android.support.design.widget.AppBarLayout>
-
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/viewPager"
-        android:layout_below="@id/barLayout"/>
+        android:layout_below="@id/tabLayout"/>
 
 </RelativeLayout>

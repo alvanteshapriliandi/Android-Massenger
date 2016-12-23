@@ -106,6 +106,7 @@
         android:layout_toRightOf="@+id/profile_ayanasahahab"
         android:layout_above="@+id/profile_ayanasahahab"
         android:layout_alignRight="@+id/textView9"
+        android:background="#778899"
         android:layout_alignEnd="@+id/textView9" />
 
 </RelativeLayout>

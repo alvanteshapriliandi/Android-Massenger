@@ -39,9 +39,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/FragmentWelcome_Getstarted_button"
         android:background="#66CDAA"
-        android:shadowRadius="10"
-        android:shadowDx="2"
-        android:shadowDy="2"
         android:text="@string/get_started"
         />
 </LinearLayout>
