@@ -8,17 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activitis.MainActivity" />
-        <activity android:name=".view.activitis.LoginActivity" />
-        <activity android:name=".view.activitis.RegisterActivity" />
-        <activity android:name=".view.activitis.forgetActivity" />
-        <activity android:name=".view.activitis.WelcomeActivity">
+        <activity android:name=".view.activitis.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activitis.ChangeActivity"></activity>
+        <activity android:name=".view.activitis.LoginActivity" />
+        <activity android:name=".view.activitis.RegisterActivity" />
+        <activity android:name=".view.activitis.forgetActivity" />
+        <activity android:name=".view.activitis.WelcomeActivity" />
+        <activity android:name=".view.activitis.ChangeActivity" />
+        <activity android:name=".view.activitis.ChatActivity"></activity>
     </application>
 
 </manifest>

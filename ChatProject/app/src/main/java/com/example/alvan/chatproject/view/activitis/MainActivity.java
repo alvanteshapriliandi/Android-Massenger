@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.alvan.chatproject.view.fragments.AcountFragment;
 import com.example.alvan.chatproject.view.fragments.FeedbackFragment;
-import com.example.alvan.chatproject.view.fragments.MemberFragment;
+import com.example.alvan.chatproject.view.fragments.InboxFragment;
 import com.example.alvan.chatproject.view.fragments.ProfileFragment;
 import com.example.alvan.chatproject.R;
 import com.example.alvan.chatproject.view.adapter.ViewPagerAdapter;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         setSupportActionBar(toolbar);
-        viewPagerAdapter.addFragments(new MemberFragment(), "Inbox");
+        viewPagerAdapter.addFragments(new InboxFragment(), "Inbox");
         viewPagerAdapter.addFragments(new FeedbackFragment(), "Feedback");
         viewPagerAdapter.addFragments(new AcountFragment(), "Follow");
         viewPagerAdapter.addFragments(new ProfileFragment(), "Profile");
