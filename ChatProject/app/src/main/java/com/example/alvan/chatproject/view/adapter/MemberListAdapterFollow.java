@@ -17,10 +17,10 @@ import java.util.List;
  * Created by alvan on 23/12/16.
  */
 
-public class MemberListAdpterFeedback extends RecyclerView.Adapter<MemberListAdapter.MemberViewHolder> {
+public class MemberListAdapterFollow extends RecyclerView.Adapter<MemberListAdapter.MemberViewHolder> {
     private List<Member> memberList;
 
-    public MemberListAdpterFeedback() {
+    public MemberListAdapterFollow() {
         memberList = new ArrayList<>();
     }
 
@@ -56,7 +56,7 @@ public class MemberListAdpterFeedback extends RecyclerView.Adapter<MemberListAda
 
     @Override
     public MemberListAdapter.MemberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_feedback, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_acount, parent, false);
         MemberListAdapter.MemberViewHolder memberViewHolder = new MemberListAdapter.MemberViewHolder(view);
         return memberViewHolder;
     }
