@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
     tools:context=".view.fragments.WelcomeFragment"
     android:weightSum="1">
 
@@ -15,7 +16,8 @@
         android:layout_width="fill_parent"
         android:layout_height="90dip"
         android:background="@layout/footer_repeat"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
     </LinearLayout>
 
     <ImageView
@@ -30,15 +32,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/FragmentWelcome_Signin_button"
-        android:background="#66CDAA"
+        android:background="@android:color/white"
         android:text="@string/sign_ins"
-        />
+        android:layout_marginBottom="15dp"
+        android:textStyle="normal|bold"
+        tools:textColor="@android:color/holo_blue_bright" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/FragmentWelcome_Getstarted_button"
-        android:background="#66CDAA"
+        android:background="@color/cardview_dark_background"
         android:text="@string/get_started"
-        />
+        android:textColor="@android:color/white" />
 </LinearLayout>
